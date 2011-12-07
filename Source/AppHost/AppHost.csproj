@@ -39,8 +39,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Lokad.Cloud.AppHost.0.4.2\lib\Lokad.Cloud.AppHost.dll</HintPath>
     </Reference>
-    <Reference Include="Lokad.Cloud.AppHost.Extensions.FileDeployments">
-      <HintPath>..\..\packages\Lokad.Cloud.AppHost.Extensions.FileDeployments.0.1.1\lib\Lokad.Cloud.AppHost.Extensions.FileDeployments.dll</HintPath>
+    <Reference Include="Lokad.Cloud.AppHost.Extensions.FileDeployments, Version=0.1.2.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Lokad.Cloud.AppHost.Extensions.FileDeployments.0.1.2\lib\Lokad.Cloud.AppHost.Extensions.FileDeployments.dll</HintPath>
     </Reference>
     <Reference Include="Lokad.Cloud.AppHost.Framework, Version=0.4.2.3, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Lokad.Cloud.AppHost.Framework.0.4.2\lib\Lokad.Cloud.AppHost.Framework.dll</HintPath>
