@@ -2,14 +2,13 @@
 using System.IO;
 using System.Threading;
 using System.Xml.Linq;
-using Contracts;
 using Lokad.Cloud.AppHost.Framework;
 
 namespace App1
 {
     class EntryPoint : IApplicationEntryPoint
     {
-        readonly ILogger _logger;
+        readonly StreamLogger _logger;
 
         public EntryPoint()
         {

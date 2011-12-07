@@ -2,7 +2,7 @@
 using System.Security.Cryptography.X509Certificates;
 using Lokad.Cloud.AppHost.Framework;
 
-namespace Source
+namespace AppHost
 {
     public class HostContext : IHostContext
     {

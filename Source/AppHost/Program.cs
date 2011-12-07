@@ -5,7 +5,7 @@ using Lokad.Cloud.AppHost;
 using Lokad.Cloud.AppHost.Extensions.FileDeployments;
 using Lokad.Cloud.AppHost.Framework;
 
-namespace Source
+namespace AppHost
 {
     internal class Program
     {

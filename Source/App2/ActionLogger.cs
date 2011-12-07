@@ -1,9 +1,8 @@
 ﻿using System;
-using Contracts;
 
 namespace App2
 {
-    class ActionLogger : ILogger
+    class ActionLogger
     {
         readonly Action<string, object[]> _action;
 

@@ -1,11 +1,10 @@
 ﻿using System;
 using System.IO;
 using System.Text;
-using Contracts;
 
 namespace App1
 {
-    class StreamLogger : ILogger
+    class StreamLogger
     {
         readonly Stream _stream;
         readonly Encoding _encoding;
