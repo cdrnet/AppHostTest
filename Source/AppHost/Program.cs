@@ -2,6 +2,7 @@
 using System.IO;
 using System.Threading;
 using Lokad.Cloud.AppHost;
+using Lokad.Cloud.AppHost.Extensions.FileDeployments;
 using Lokad.Cloud.AppHost.Framework;
 
 namespace Source
@@ -32,10 +33,10 @@ namespace Source
             var observer = new HostObserverSubject();
             observer.Subscribe(Console.WriteLine);
 
-            var basePath = Path.GetDirectoryName(typeof (Program).Assembly.Location);
-            var fileDeploymentReader = new FileDeploymentReader(basePath, "head.xml");
+            var path = Path.Combine(Path.GetDirectoryName(typeof (Program).Assembly.Location), "Deployments");
+            var deploymentReader = new FileDeploymentReader(path);
 
-            var context = new HostContext(observer, fileDeploymentReader);
+            var context = new HostContext(observer, deploymentReader);
 
             _host = new Host(context);
         }

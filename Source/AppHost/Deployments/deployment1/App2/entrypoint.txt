@@ -1,0 +1,1 @@
+﻿App2.EntryPoint, App2

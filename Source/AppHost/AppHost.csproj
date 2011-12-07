@@ -34,11 +34,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Lokad.Cloud.AppHost">
-      <HintPath>..\..\Library\Lokad.Cloud.AppHost.dll</HintPath>
+    <Reference Include="Lokad.Cloud.AppHost, Version=0.4.2.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Lokad.Cloud.AppHost.0.4.2\lib\Lokad.Cloud.AppHost.dll</HintPath>
     </Reference>
-    <Reference Include="Lokad.Cloud.AppHost.Framework">
-      <HintPath>..\..\Library\Lokad.Cloud.AppHost.Framework.dll</HintPath>
+    <Reference Include="Lokad.Cloud.AppHost.Extensions.FileDeployments">
+      <HintPath>..\..\packages\Lokad.Cloud.AppHost.Extensions.FileDeployments.0.1.1\lib\Lokad.Cloud.AppHost.Extensions.FileDeployments.dll</HintPath>
+    </Reference>
+    <Reference Include="Lokad.Cloud.AppHost.Framework, Version=0.4.2.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Lokad.Cloud.AppHost.Framework.0.4.2\lib\Lokad.Cloud.AppHost.Framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -53,7 +57,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FileDeploymentReader.cs" />
     <Compile Include="HostContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -62,10 +65,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="deployment-1.xml">
+    <Content Include="Deployments\currentdeployment.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="head.xml">
+    <Content Include="Deployments\deployment1\App1\entrypoint.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Deployments\deployment1\App2\entrypoint.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
