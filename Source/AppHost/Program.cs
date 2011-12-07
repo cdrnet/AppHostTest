@@ -18,11 +18,7 @@ namespace AppHost
 
             appHost.Start();
 
-            Console.CancelKeyPress += (sender, e) => ConsoleCancelKeyPress(appHost);
-        }
-
-        static void ConsoleCancelKeyPress(Program appHost)
-        {
+            Console.ReadKey();
             appHost.Stop();
         }
 
@@ -43,7 +39,7 @@ namespace AppHost
 
         public void Start()
         {
-            _host.RunSync(_cts.Token);
+            _host.Run(_cts.Token);
         }
 
         public void Stop()
