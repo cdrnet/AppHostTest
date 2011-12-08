@@ -35,16 +35,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Lokad.Cloud.AppHost, Version=0.4.2.3, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Lokad.Cloud.AppHost, Version=0.4.3.4, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Lokad.Cloud.AppHost.0.4.2\lib\Lokad.Cloud.AppHost.dll</HintPath>
+      <HintPath>..\..\packages\Lokad.Cloud.AppHost.0.4.3\lib\Lokad.Cloud.AppHost.dll</HintPath>
     </Reference>
-    <Reference Include="Lokad.Cloud.AppHost.Extensions.FileDeployments, Version=0.1.2.3, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Lokad.Cloud.AppHost.Extensions.FileDeployments, Version=0.1.3.4, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Lokad.Cloud.AppHost.Extensions.FileDeployments.0.1.2\lib\Lokad.Cloud.AppHost.Extensions.FileDeployments.dll</HintPath>
+      <HintPath>..\..\packages\Lokad.Cloud.AppHost.Extensions.FileDeployments.0.1.3\lib\Lokad.Cloud.AppHost.Extensions.FileDeployments.dll</HintPath>
     </Reference>
-    <Reference Include="Lokad.Cloud.AppHost.Framework, Version=0.4.2.3, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Lokad.Cloud.AppHost.Framework.0.4.2\lib\Lokad.Cloud.AppHost.Framework.dll</HintPath>
+    <Reference Include="Lokad.Cloud.AppHost.Framework, Version=0.4.3.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Lokad.Cloud.AppHost.Framework.0.4.3\lib\Lokad.Cloud.AppHost.Framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
