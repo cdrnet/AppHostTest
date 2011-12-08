@@ -2,7 +2,6 @@
 using System.IO;
 using System.Reactive.Linq;
 using System.Threading;
-using System.Reactive;
 using Lokad.Cloud.AppHost;
 using Lokad.Cloud.AppHost.Extensions.FileDeployments;
 using Lokad.Cloud.AppHost.Framework;
@@ -23,6 +22,8 @@ namespace AppHost
 
             Console.ReadKey();
             appHost.Stop();
+
+            Console.ReadKey();
         }
 
         public Program()
@@ -30,8 +31,12 @@ namespace AppHost
             _cts = new CancellationTokenSource();
 
             var observer = new HostObserverSubject();
-            observer.Subscribe(Console.WriteLine);
-            observer.OfType<CellExceptionRestartedEvent>().Subscribe(e => Console.WriteLine(e.Exception));
+            observer.OfType<HostStartedEvent>().Subscribe(e => Console.WriteLine("AppHost started."));
+            observer.OfType<HostStoppedEvent>().Subscribe(e => Console.WriteLine("AppHost stopped."));
+            observer.OfType<CellStartedEvent>().Subscribe(e => Console.WriteLine("Cell {0} started.", e.CellName));
+            observer.OfType<CellStoppedEvent>().Subscribe(e => Console.WriteLine("Cell {0} stopped.", e.CellName));
+            observer.OfType<CellExceptionRestartedEvent>().Subscribe(e => Console.WriteLine("Cell {0} exception: {1}", e.CellName, e.Exception));
+            observer.OfType<CellFatalErrorRestartedEvent>().Subscribe(e => Console.WriteLine("Cell {0} fatal error: {1}", e.CellName, e.Exception));
 
             var path = Path.Combine(Path.GetDirectoryName(typeof (Program).Assembly.Location), "Deployments");
             var deploymentReader = new FileDeploymentReader(path);
