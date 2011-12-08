@@ -1,9 +1,12 @@
 ﻿using System;
 using System.IO;
+using System.Reactive.Linq;
 using System.Threading;
+using System.Reactive;
 using Lokad.Cloud.AppHost;
 using Lokad.Cloud.AppHost.Extensions.FileDeployments;
 using Lokad.Cloud.AppHost.Framework;
+using Lokad.Cloud.AppHost.Framework.Events;
 
 namespace AppHost
 {
@@ -28,6 +31,7 @@ namespace AppHost
 
             var observer = new HostObserverSubject();
             observer.Subscribe(Console.WriteLine);
+            observer.OfType<CellExceptionRestartedEvent>().Subscribe(e => Console.WriteLine(e.Exception));
 
             var path = Path.Combine(Path.GetDirectoryName(typeof (Program).Assembly.Location), "Deployments");
             var deploymentReader = new FileDeploymentReader(path);

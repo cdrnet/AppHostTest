@@ -20,7 +20,7 @@ namespace App1
         {
             while (!cancellationToken.IsCancellationRequested)
             {
-                _logger.Write("Timestamp: {0} [App1]", DateTime.Now);
+                _logger.Write("[App1] {0} {1}: Timestamp {2}", environment.CurrentDeploymentName, environment.CellName, DateTime.Now);
 
                 cancellationToken.WaitHandle.WaitOne(5000);
             }
@@ -28,7 +28,7 @@ namespace App1
 
         public void ApplyChangedSettings(XElement settings)
         {
-            _logger.Write("SettingsChanged: {0} [App1]", settings.ToString());
+            _logger.Write("[App1] SettingsChanged: {0}", settings.ToString());
         }
     }
 }

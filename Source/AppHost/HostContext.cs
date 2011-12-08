@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Security.Cryptography.X509Certificates;
 using Lokad.Cloud.AppHost.Framework;
 
@@ -34,7 +35,9 @@ namespace AppHost
 
         public string GetLocalResourcePath(string resourceName)
         {
-            throw new NotImplementedException();
+            var path = Path.Combine(Environment.CurrentDirectory, "Temp", resourceName);
+            Directory.CreateDirectory(path);
+            return path;
         }
 
         public void ProvisionWorkerInstances(int numberOfInstances)
